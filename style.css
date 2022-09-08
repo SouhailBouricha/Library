@@ -4,5 +4,49 @@
     box-sizing: border-box;
 }
 body{
-    
+    font-family: 'Poppins', sans-serif;
+    background-color: #F0EEF1;
+
+}
+.header_wrapper{
+    min-height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #FFFBFB;
+    font-size: 1.5rem;
+    font-weight: 700;
+    box-shadow: 1px 0px 8px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+}
+.header_wrapper h1{
+    font-weight: 600;
+}
+.login {
+    font-size: 1.6rem;
+    padding: 0.9rem 1.1rem;
+    font-weight: 500;
+    border: none;
+    background: none;
+    outline: none;
+    border-radius: 0.5rem;
+    background-color: #F0EEF1;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+.login:hover{
+    background-color: #D8D8D8;
+}
+.content{
+    background-color: #F0EEF1;
+    min-height: 85vh;
+    padding: 20px;
+    margin-top: 20px;
+}
+.add{
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 1rem 2rem;
 }
