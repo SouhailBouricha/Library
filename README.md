@@ -1,5 +1,8 @@
 ## Library
 
+![Design preview for the Project: Library project](./icons/img1.PNG)
+
+
 - [x] add the files
 - [x] style evrything
 - [x] write the logic
