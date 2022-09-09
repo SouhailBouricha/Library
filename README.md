@@ -7,6 +7,7 @@
 - [x] style evrything
 - [x] write the logic
 - [x] optimize the app
+- [x] fix bugs
 
 
 If you want to try a live show [click here](https://souhailbouricha.github.io/Calculator/) //😁
