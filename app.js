@@ -120,7 +120,7 @@ function store(){
 }
 // addBookToLibrary("T1","A1",100,true);
 // addBookToLibrary("T2","A2",200,false);
-// console.log(JSON.stringify(myLibrary));
+console.log(JSON.stringify(myLibrary));
 localStorage.setItem("library",JSON.stringify(myLibrary));
 displayBooks();
 
