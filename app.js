@@ -10,6 +10,7 @@ const removes = document.querySelectorAll(".remove");
 let myLibrary = [];
 
 
+
 /*ADD Event Listener */ 
 
 date.innerText = new Date().getFullYear();
@@ -81,8 +82,32 @@ function displayBooks(){
         <button class="info read">${ele.isread}</button>
         <button class="info remove">Remove</button>`;
         gridTable.appendChild(the_new_book);
+
+        if(ele.isread == true){
+            the_new_book.children[3].innerText = "READ";
+        }
+        else{
+            the_new_book.children[3].innerText = "Not READ";
+        }
+       
+
         the_new_book.querySelector(".remove").addEventListener("click",(e) =>{
-            console.log(e.target);
+            myLibrary.splice(e.target.parentElement.getAttribute("data-book"),1);
+            console.log(myLibrary);
+            displayBooks();
+        });
+        the_new_book.querySelector(".read").addEventListener("click",(e) =>{
+            console.log(myLibrary[e.target.parentElement.getAttribute("data-book")]);
+            if(myLibrary[e.target.parentElement.getAttribute("data-book")].isread){
+                myLibrary[e.target.parentElement.getAttribute("data-book")].isread = false;
+                e.target.innerText = "Not READ";
+            }
+            else{
+                myLibrary[e.target.parentElement.getAttribute("data-book")].isread = true;
+                console.log(e.target);
+                e.target.innerText = "READ";
+            }
+            console.log(myLibrary[e.target.parentElement.getAttribute("data-book")]);
         });
         i++;
     }
@@ -91,7 +116,7 @@ function displayBooks(){
 addBookToLibrary("T1","A1",100,true);
 addBookToLibrary("T2","A2",200,false);
 displayBooks();
-
+// console.log(myLibrary);
 
 
 
