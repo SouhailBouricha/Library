@@ -1,3 +1,96 @@
+const date = document.querySelector(".date"); 
+date.innerText = new Date().getFullYear();
+
+const addBtn = document.querySelector(".add");
+const pupup = document.querySelector(".pupup");
+const create = document.querySelector(".create");
+
+addBtn.addEventListener("click",(e) =>{
+    // gsap.to(".pupup",1,{display : "flex",duration: 1,ease: "power1.inOut"});
+    // gsap.to(".create",1,{clipPath: 'circle(2500px)',duration: 1,ease: "power1.inOut"});
+    pupup.classList.add("active");
+    create.classList.add("active");
+
+});
+
+pupup.addEventListener("click",(e) =>{
+    pupup.classList.remove("active");
+    create.classList.remove("active");
+    console.log(e.target);
+});
+
+create.addEventListener("click",(e) =>{
+    e.stopPropagation();
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let display_value = "";
 let Value1 = ''; 
 let Value2 = ''; 

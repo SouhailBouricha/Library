@@ -1,27 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./icons/bookshelf.png" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="./icons/bookshelf.png"
+      type="image/x-icon"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library App</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="header_wrapper">
-            <h1>library</h1>
-            <button class="login">Log in</button>
-        </div>
+      <div class="header_wrapper">
+        <h1>library</h1>
+        <button class="login">Log in</button>
+      </div>
     </header>
     <div class="content">
-        <button class="add">+ Add book</button>
+      <button class="add">+ Add book</button>
+      <div class="grid-table">
+        <div class="bookCart">
+          <p class="info title">T1</p>
+          <p class="info author">author</p>
+          <p class="info pages">pages</p>
+          <button class="info read">Read</button>
+          <button class="info remove">Remove</button>
+        </div>
+        <div class="bookCart">
+          <p class="info title">T1</p>
+          <p class="info author">author</p>
+          <p class="info pages">pages</p>
+          <button class="info read">Read</button>
+          <button class="info remove">Remove</button>
+        </div>
+        <div class="bookCart">
+          <p class="info title">T1</p>
+          <p class="info author">author</p>
+          <p class="info pages">pages</p>
+          <button class="info read">Read</button>
+          <button class="info remove">Remove</button>
+        </div>
+      </div>
     </div>
+    <footer>
+      <p class="copy">
+        Copyright © <span class="date">2015</span> SouhailBouricha
+      </p>
+      <a class="icon" href="https://github.com/SouhailBouricha" target="_blank"
+        ><img src="./icons/iconmonstr-github-1.svg" alt="icon_Github"
+      /></a>
+    </footer>
+    <div class="pupup">
+      <form class="create">
+        <h2>Add new book</h2>
+        <input
+          type="text"
+          name="title"
+          class="input title"
+          placeholder="Title"
+          required
+        />
+        <input
+          type="text"
+          name="author"
+          class="input author"
+          placeholder="Author"
+          required
+        />
+        <input
+          type="number"
+          name="pages"
+          class="input pages"
+          placeholder="Pages"
+          required
+        />
+        <div class="isread">
+          <p>Have you read it?</p>
+          <input type="checkbox" name="read " class="read" />
+        </div>
+        <button type="submit" class="read submit">Submit</button>
+      </form>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"
+      integrity="sha512-Mf/xUqfWvDIr+1B6zfnIDIiG7XHzyP/guXUWgV6PgaQoIFeXkJQR5XWh9fqAiCiRCpemabt3naV4jhDWVnuYDQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="./app.js"></script>
-</body>
+  </body>
 </html>
