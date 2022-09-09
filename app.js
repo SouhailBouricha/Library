@@ -1,10 +1,15 @@
-const date = document.querySelector(".date"); 
-date.innerText = new Date().getFullYear();
+/*Select Elements */
 
 const addBtn = document.querySelector(".add");
 const pupup = document.querySelector(".pupup");
 const create = document.querySelector(".create");
+const date = document.querySelector(".date"); 
+let myLibrary = [];
 
+
+/*ADD Event Listener */ 
+
+date.innerText = new Date().getFullYear();
 addBtn.addEventListener("click",(e) =>{
     // gsap.to(".pupup",1,{display : "flex",duration: 1,ease: "power1.inOut"});
     // gsap.to(".create",1,{clipPath: 'circle(2500px)',duration: 1,ease: "power1.inOut"});
@@ -23,6 +28,7 @@ create.addEventListener("click",(e) =>{
     e.stopPropagation();
 });
 
+/* Functions */ 
 
 
 
