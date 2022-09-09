@@ -1,4 +1,4 @@
-## Library
+## Library App
 
 ![Design preview for the Project: Library project](./icons/img1.PNG)
 
