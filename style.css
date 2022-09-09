@@ -134,6 +134,13 @@ footer{
 .read:hover{
     background-color: #40db3b;
 }
+.read.active{
+    background-color: #e58c8c;
+}
+.read.active:hover{
+    background-color: #db3b3b;
+}
+
 .remove{
     background-color: #F0EEF1   ;
 }

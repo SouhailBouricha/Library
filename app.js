@@ -88,6 +88,7 @@ function displayBooks(){
         }
         else{
             the_new_book.children[3].innerText = "Not READ";
+            the_new_book.children[3].classList.add("active");
         }
        
 
@@ -101,10 +102,12 @@ function displayBooks(){
             if(myLibrary[e.target.parentElement.getAttribute("data-book")].isread){
                 myLibrary[e.target.parentElement.getAttribute("data-book")].isread = false;
                 e.target.innerText = "Not READ";
+                e.target.classList.add("active");
             }
             else{
                 myLibrary[e.target.parentElement.getAttribute("data-book")].isread = true;
                 e.target.innerText = "READ";
+                e.target.classList.remove("active");
             }
             console.log(myLibrary);
             store();
@@ -113,11 +116,12 @@ function displayBooks(){
     }
 }
 function store(){
-    localStorage.setItem("library",JSON.stringify(myLibrary))
+    localStorage.setItem("library",JSON.stringify(myLibrary));
 }
 // addBookToLibrary("T1","A1",100,true);
 // addBookToLibrary("T2","A2",200,false);
 // console.log(JSON.stringify(myLibrary));
+// localStorage.setItem("library",JSON.stringify(myLibrary));
 displayBooks();
 
 // console.log(myLibrary);
