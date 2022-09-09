@@ -7,7 +7,7 @@ const date = document.querySelector(".date");
 const gridTable = document.querySelector(".grid-table"); 
 const inputs = document.querySelectorAll(".create input"); 
 const removes = document.querySelectorAll(".remove"); 
-let myLibrary = [];
+let myLibrary = JSON.parse(localStorage.getItem("library"));
 
 
 
@@ -24,7 +24,6 @@ addBtn.addEventListener("click",(e) =>{
 pupup.addEventListener("click",(e) =>{
     pupup.classList.remove("active");
     create.classList.remove("active");
-    console.log(e.target);
 });
 
 create.addEventListener("click",(e) =>{
@@ -37,12 +36,11 @@ create.addEventListener("submit",(e) =>{
     let author = inputs[1].value;
     let pages = inputs[2].value;
     if (inputs[3].checked){
-        read = "Read" 
+        read = true
     }  
     else{
-        read = "Not read";
+        read = false
     }
-    console.log(title,author,pages,read);
     addBookToLibrary(title,author,pages,read);
     displayBooks();
     pupup.classList.remove("active");
@@ -51,6 +49,7 @@ create.addEventListener("submit",(e) =>{
     inputs[1].value = "";
     inputs[2].value = "";
     inputs[3].checked = false;
+    store();
 });
 
 
@@ -72,6 +71,7 @@ function addBookToLibrary(title,author,pages,isread) {
 function displayBooks(){
     gridTable.innerHTML = '';
     let i = 0;
+    console.log("------------");
     for(ele of myLibrary){
         the_new_book = document.createElement("div");
         the_new_book.classList.add('bookCart');
@@ -82,7 +82,7 @@ function displayBooks(){
         <button class="info read">${ele.isread}</button>
         <button class="info remove">Remove</button>`;
         gridTable.appendChild(the_new_book);
-
+        console.log(ele.isread);
         if(ele.isread == true){
             the_new_book.children[3].innerText = "READ";
         }
@@ -93,29 +93,33 @@ function displayBooks(){
 
         the_new_book.querySelector(".remove").addEventListener("click",(e) =>{
             myLibrary.splice(e.target.parentElement.getAttribute("data-book"),1);
-            console.log(myLibrary);
             displayBooks();
+            store();
         });
+        console.log(myLibrary);
         the_new_book.querySelector(".read").addEventListener("click",(e) =>{
-            console.log(myLibrary[e.target.parentElement.getAttribute("data-book")]);
             if(myLibrary[e.target.parentElement.getAttribute("data-book")].isread){
                 myLibrary[e.target.parentElement.getAttribute("data-book")].isread = false;
                 e.target.innerText = "Not READ";
             }
             else{
                 myLibrary[e.target.parentElement.getAttribute("data-book")].isread = true;
-                console.log(e.target);
                 e.target.innerText = "READ";
             }
-            console.log(myLibrary[e.target.parentElement.getAttribute("data-book")]);
+            console.log(myLibrary);
+            store();
         });
         i++;
     }
 }
-
-addBookToLibrary("T1","A1",100,true);
-addBookToLibrary("T2","A2",200,false);
+function store(){
+    localStorage.setItem("library",JSON.stringify(myLibrary))
+}
+// addBookToLibrary("T1","A1",100,true);
+// addBookToLibrary("T2","A2",200,false);
+// console.log(JSON.stringify(myLibrary));
 displayBooks();
+
 // console.log(myLibrary);
 
 
