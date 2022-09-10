@@ -7,7 +7,7 @@ const date = document.querySelector(".date");
 const gridTable = document.querySelector(".grid-table"); 
 const inputs = document.querySelectorAll(".create input"); 
 const removes = document.querySelectorAll(".remove"); 
-let myLibrary = JSON.parse(localStorage.getItem("library"));
+let myLibrary = JSON.parse(localStorage.getItem("library")) ? JSON.parse(localStorage.getItem("library")) : [];
 
 
 
