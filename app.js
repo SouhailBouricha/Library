@@ -120,7 +120,7 @@ function store(){
 }
 displayBooks();
 
-// console.log(myLibrary);
+console.log(myLibrary);
 
 
 
