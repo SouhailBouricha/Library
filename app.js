@@ -118,7 +118,7 @@ function displayBooks(){
 function store(){
     localStorage.setItem("library",JSON.stringify(myLibrary));
 }
-localStorage.setItem("library",JSON.stringify(myLibrary));
+// localStorage.setItem("library",JSON.stringify(myLibrary));
 displayBooks();
 
 // console.log(myLibrary);
