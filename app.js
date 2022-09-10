@@ -118,7 +118,6 @@ function displayBooks(){
 function store(){
     localStorage.setItem("library",JSON.stringify(myLibrary));
 }
-console.log(JSON.stringify(myLibrary));
 localStorage.setItem("library",JSON.stringify(myLibrary));
 displayBooks();
 
