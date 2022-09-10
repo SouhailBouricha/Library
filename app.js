@@ -174,9 +174,6 @@ displayBooks();
 
 
 
-
-
-
 // let display_value = "";
 // let Value1 = ''; 
 // let Value2 = ''; 
