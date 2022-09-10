@@ -120,7 +120,6 @@ function store(){
 }
 displayBooks();
 
-console.log(myLibrary);
 
 
 
